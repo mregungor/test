@@ -1,0 +1,42 @@
+/*
+Relative Unity
+     40%
+     em 
+     ex 
+     lh 
+     rem 
+     rlh 
+     vb: 1% of viewport's size
+     vh: 1% of viewport's height
+     vw: 1% of viewport's width
+     vmax: 1% of viewport's larger dimension
+     vmin: 1% of viewport's smaller dimension
+*/
+
+
+/*
+Absolute Units
+px
+cm
+in
+mm
+pc (1pc = 12pt)
+pt (1/72 in)
+*/
+
+#Header1
+{
+    font-size: 12vh;
+}
+
+#p1{
+    font-size: 8vh;
+}
+
+#p2{
+    font-size: 4vh;
+}
+
+
+
+

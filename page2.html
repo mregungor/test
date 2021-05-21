@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        /*CSS Codes*/
+        body
+        {
+            box-sizing: border-box;
+        }
+        #divPanel
+        {
+            justify-content: center;
+            text-align: center;
+        }
+        #divLeftPanel
+        {
+            
+            background-color: rgb(29, 138, 240);
+            float: left;
+            width: 20%;
+            height: 200px;
+        }
+        #divRightPanel
+        {
+            background-color: rgb(215, 29, 240);
+            float: left;
+            width: 20%;
+            height: 200px;
+        }
+        #divMainPanel
+        {
+            background-color: rgb(217, 243, 255);
+            float: left;
+            width: 60%;
+            height: 200px;
+        }
+
+        .topNavBarClass
+        {
+            overflow: hidden;
+            background-color: rgb(42, 47, 48);
+        }
+
+        .topNavBarClass a
+        {
+            float: left;
+            display: block;
+            color:rgb(255, 255, 255);
+            font-size: 16pt;
+            font-family: Arial, Helvetica, sans-serif;
+            text-decoration: none;
+            text-align: center;
+            padding: 20px 20px;
+        }
+
+        .topNavBarClass a:hover
+        {
+            background-color: rgb(66, 66, 66);
+            color: rgb(255, 255, 255);
+        }
+
+        .topNavBarClass a.active
+        {
+            background-color: rgb(29, 138, 240);
+        }
+
+        .topNavBarClass .navButton
+        {
+            display: none;
+        }
+
+        @media screen and (max-width: 600px)
+        {
+            .topNavBarClass a:not(:first-child)
+            {
+                display: none;
+            }
+            .topNavBarClass a.navButton
+            {
+                float: right;
+                display: block;
+            }
+        }
+
+        @media screen and (max-width: 600px)
+        {
+            .topNavBarClass.responsive {
+                position: relative;
+            }
+            .topNavBarClass.responsive .navButton
+            {
+                position: absolute;
+                right: 0;
+                top: 0;
+            }
+            .topNavBarClass.responsive a{
+                float:none;
+                display: block;
+                text-align: left;
+            }
+        }
+
+
+        @media screen and (max-width: 800px)
+        {
+            
+            #divLeftPanel, #divRightPanel, #divMainPanel{
+                width: 100%;            
+            }
+
+            /*
+            #divLeftPanel, #divRightPanel{
+                width: 0%;
+            } 
+            #divMainPanel
+            {
+                width: 100%;
+            }
+            */
+        }
+    </style>
+
+    <script>
+        //Javascript Code 
+        function openNavMenu()
+        {
+            var navMenu= document.getElementById("topNavBar");
+            if(navMenu.className === "topNavBarClass")
+            {
+                navMenu.className = "topNavBarClass responsive";
+            }else
+            {
+                navMenu.className = "topNavBarClass";
+            }
+        }
+    </script>
+
+</head>
+<body>
+    <div class="topNavBarClass" id="topNavBar">
+        <a href="index.html"> Home</a>
+        <a href="#Page2" class="active"> Page 2</a>
+        <a href="#contact"> Contact</a>
+        <a href="#aboutUs"> About Us</a>
+        <a href="javascript:void(0);" class="navButton" onclick="openNavMenu()">
+            <i class="items">=</i>
+        </a>
+    </div>
+
+
+    <h2> Resizing divisions using Media Queries & Responsive Navigation Bar </h2>
+
+    <p> Resize the browser window or open with different devices</p>
+    <br>
+    <div id="divPanel">
+        <div id="divLeftPanel">
+            <p>Left Panel</p>
+        </div>
+
+        <div id="divMainPanel">
+            <p> Main Panel</p>
+        </div>
+
+        <div id="divRightPanel">
+            <p> Right Panel</p>
+        </div>
+    </div>
+
+</body>
+
+</html>
